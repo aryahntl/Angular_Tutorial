@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,26 +9,38 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './roles.component.css'
 })
 
-export class RolesComponent {
-  // variables
-  firstname: String = "Himanshu";
-  age=22;
-  isActive:boolean=false;
+export class RolesComponent implements OnInit {
 
-  currectDate:Date= new Date();
-
-  email="arya.h.ntl@gmail.com";
-
-  inputType:string="checkbox";
-
-  state:string=""
-
-  // function 
-  showWelcomeAlert(){
-    alert("Hello ji kese ho?")
+  ngOnInit(): void {
+    alert("hii")
   }
 
-  showMessage(message:string){
-    alert(message)
-  }
+
+
+
+
+
+
+
+  // //variables
+  // firstname: String = "Himanshu";
+  // age=22;
+  // isActive:boolean=false;
+
+  // currectDate:Date= new Date();
+
+  // email="arya.h.ntl@gmail.com";
+
+  // inputType:string="checkbox";
+
+  // state:string=""
+
+  // // function 
+  // showWelcomeAlert(){
+  //   alert("Hello ji kese ho?")
+  // }
+
+  // showMessage(message:string){
+  //   alert(message)
+  // }
 }
