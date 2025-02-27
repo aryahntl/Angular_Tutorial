@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'learningNg';
+  welcomeMessage:String = 'Welcome to Angular 8';
+  
+  public WelcomeMessage():any{
+    return 'Dear User ' +this.welcomeMessage;
+
+  }
 }
