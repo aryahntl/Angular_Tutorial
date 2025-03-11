@@ -1,1 +1,23 @@
 <h2>{{WelcomeMessage()}} </h2>
+
+<button (click)="ChangeMessage()" style="font-size: 20px; padding: 0 15px; margin: 2px 15px; background-color: yellow;">
+    Change Message</button>
+
+<button (click)="ResetMessage()"
+    style="font-size: 20px; padding: 0 15px; margin:2px 15px; background-color: rgba(0, 21, 255, 0.555);"> Reset
+    Message</button>
+
+<button [ngStyle]="applyStyle()">myStyle Fonction button for CSS styling</button>
+<br>
+<img [src]="imageURL" width="200px" alt="Hanumanji">
+<br>
+
+<p>{{count}}</p>
+<Button (click)="increaseCount()">Increase Count</Button>
+<Button (click)="decreaseCount()">Decrease Count</Button>
+
+<br>
+
+<h2>Two day data binding </h2>
+<input type="text" [(ngModel)]="username" placeholder="Enter Your UserName">
+<p>the User Name is :{{username}}</p>
