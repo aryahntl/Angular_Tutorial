@@ -12,12 +12,12 @@
 <img [src]="imageURL" width="200px" alt="Hanumanji">
 <br>
 
-<p>{{count}}</p>
-<Button (click)="increaseCount()">Increase Count</Button>
-<Button (click)="decreaseCount()">Decrease Count</Button>
+<p>the count is : <strong>{{count}}</strong></p>
+<Button style="font-size: 20px; padding: 0 15px; margin:2px 15px;" (click)="increaseCount()">Increase Count</Button>
+<Button style="font-size: 20px; padding: 0 15px; margin:2px 15px;" (click)="decreaseCount()">Decrease Count</Button>
 
 <br>
 
 <h2>Two day data binding </h2>
 <input type="text" [(ngModel)]="username" placeholder="Enter Your UserName">
-<p>the User Name is :{{username}}</p>
+<p>the User Name is : {{username}}</p>
