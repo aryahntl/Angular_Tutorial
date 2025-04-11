@@ -12,8 +12,36 @@ export class StudentComponent implements OnInit {
   ngOnInit() {
   }
 
-  firstName:String="Himanshu";
-  lastName:String="Arya";
-  gender:String="Male";
-  age:number=23;
+  public firstName: String = "Krishna";
+  lastName: String = "Arya";
+  gender: String = "Male";
+  age: number = 23;
+  date = new Date();
+
+  public names = ["Himanshu", "karan", "Rahul", "Rohit", "Rajat"];
+
+  public switch: boolean = true;
+
+  toggleSwitch() {
+    this.switch = !this.switch;
+  }
+
+  public isLogedIn: boolean = false;
+
+  toggleLogedIn() {
+
+    this.isLogedIn = !this.isLogedIn;
+  }
+
+  // getFormattedTime() {
+  //   return new Date().toLocaleTimeString('en-Us', {
+  //     hour: '2-digit',
+  //     minute: '2-digit',
+  //     second: '2-digit',
+  //     hour12: true
+  //   }).toUpperCase();
+  // }
 }
+
+
+

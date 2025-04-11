@@ -1,29 +1,80 @@
-<div>
-    <h2>Student Details</h2>
+<div class="container">
+  
+    <button *ngIf="!isLogedIn" (click)="toggleLogedIn()">Log In </button>
+
+    <div *ngIf="isLogedIn">
+        <div class="student-details-header">
+            <h2>Student Details</h2>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Lable</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>First Name</td>
+                    <td>{{firstName | uppercase}}</td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>{{lastName}}</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>{{gender}}</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>{{age}}</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>{{date | date:'dd-MM-yyyy hh:mm:ss aa'|uppercase}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <h1>Use of Structural Diractives</h1>
+        <p>with the help of '*' Symbole we can identify the Structural deractives
+            <br>ex. *ngFor, *ngIf and *ngSwitch
+        </p>
+        <br>
+        <br>
+        <h2>ngFor</h2>
+        <p>ngFor is used to iterate over a list of items and display them in the view</p>
+        <div *ngFor="let name of names; index as i">
+
+            <p>The {{i+1}} Name is: {{name}}</p>
+
+        </div>
+        <br><br>
+
+        <h2>ngSwitch</h2>
+        <p>ngSwitch is used to display one element from a set of elements based on the condition</p>
+
+
+        <div [ngSwitch]="firstName">
+            <p *ngSwitchCase="'Karan'">your Name is Karan </p>
+            <p *ngSwitchCase="'Himanshu'"> Your Name is Himanshu</p>
+            <p *ngSwitchDefault> select again </p>
+
+        </div>
+
+        <br><br>
+        <h2>ngIf</h2>
+        <p>ngIf is used to display the element based on the condition</p>
+        <button (click)="toggleSwitch()">Switch</button>
+
+        <div *ngIf="switch;then SwitchOn else SwitchOff"></div>
+
+        <ng-template #SwitchOn>Bulb is On </ng-template>
+        <ng-template #SwitchOff>Bulb is Off</ng-template>
+
+        <button *ngIf="isLogedIn" (click)="toggleLogedIn()"> Log Out</button>
+
+    </div>
 </div>
-<table>
-    <thead>
-        <tr>
-            <th>Lable</th>
-            <th>Value</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>First Name</td>
-            <td>{{firstName}}</td>
-        </tr>
-        <tr>
-            <td>Last Name</td>
-            <td>{{lastName}}</td>
-        </tr>
-        <tr>
-            <td>Gender</td>
-            <td>{{gender}}</td>
-        </tr>
-        <tr>
-            <td>Age</td>
-            <td>{{age}}</td>
-        </tr>
-    </tbody>
-</table>

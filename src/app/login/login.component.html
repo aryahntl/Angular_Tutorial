@@ -1,0 +1,9 @@
+<h1>Chalo ji Angular Padte h</h1> 
+
+<button *ngIf="!isLogin" (click)="toggleLogin()">Login </button>
+
+<div class="container" *ngIf="isLogin">
+    <button *ngIf="isLogin" (click)="toggleLogin()">Log Out</button>  
+    <h2>Chalo ji Login ho gaya </h2> 
+  
+</div>
