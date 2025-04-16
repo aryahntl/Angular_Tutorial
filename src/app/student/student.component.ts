@@ -1,10 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges,SimpleChange } from '@angular/core';
 
 @Component({
   selector: 'app-student',
   templateUrl: './student.component.html',
   styleUrls: ['./student.component.css']
 })
+
+export class StudentComponentimplements OnChanges{
+  @Input() myName;
+  @Input() myAge;
+
+  ngOnChanges(changes:SimpleChange){
+    for (let propertyName in changes){
+      Let change=changes[propertyName]
+    }
+
+  }
+}
 export class StudentComponent implements OnInit {
 
   constructor() { }

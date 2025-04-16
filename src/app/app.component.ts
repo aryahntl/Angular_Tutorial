@@ -19,6 +19,12 @@ export class AppComponent {
     this.welcomeMessage='Welcome to Angular 8';
   }
 
+  public name="Himanshu";
+
+  myName:String="hello World";
+  myAge=24;
+  userText:string="Hello User";
+
   public WelcomeMessage():any{
     return 'Dear User ' +this.welcomeMessage;
 
@@ -43,4 +49,6 @@ export class AppComponent {
   decreaseCount(){
     this.count--;
   }
+
+
 }

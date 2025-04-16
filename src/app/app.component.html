@@ -1,5 +1,19 @@
 <app-login></app-login>
+
+<p>Name: <input type="text"[(ngModel)]="myName"></p>
+<p>Age: <input type="number" [(ngModel)]="myAge"></p>
+<br>
+
+<app-student [testName]="myName" [testAge]="myAge" ></app-student>
+<br>
+<br>
 <h2>{{WelcomeMessage()}} </h2>
+
+<app-child [parentName]="name"></app-child>
+<p>User Test : <input type="text" [(ngModel)]="userText"></p>
+
+<br>
+<app-hooks [simpleInput]="userText"></app-hooks>
 
 <button (click)="ChangeMessage()" style="font-size: 20px; padding: 0 15px; margin: 2px 15px; background-color: yellow;">
     Change Message</button>
